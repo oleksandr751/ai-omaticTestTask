@@ -1,0 +1,35 @@
+.mainDiv {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ width: 350px;
+ background-color: white;
+}
+.eachUser {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ width: 100%;
+}
+.userInfo {
+ display: flex;
+ flex-direction: column;
+ text-align: left;
+ border-bottom: 2px solid #000000;
+ border-color: #bebebe;
+ border-width: thin;
+ padding: 20px;
+}
+.backGroundDiv {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ background-color: rgb(233, 233, 233);
+}
+.userImage {
+ width: 75px;
+ height: 90px;
+ padding: 20px;
+}
