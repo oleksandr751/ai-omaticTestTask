@@ -16,17 +16,33 @@ const MainPage = () => {
  return (
   <div className='backGroundDiv'>
    <h1>Main Page</h1>
-   <div className='mainDiv'>
+   <div
+    className='mainDiv'
+    style={
+     usersData.length >= 3
+      ? { alignItems: 'flex-start' }
+      : { alignItems: 'center' }
+    }
+   >
     {' '}
     {usersData.map((user, idx) => (
      <div key={idx} className='eachUser'>
       {' '}
       <div>
-       <img alt='userImage' className='userImage' src={user.image}></img>
+       <img
+        alt='userImage'
+        className='userImage'
+        src={
+         user.image
+          ? user.image
+          : 'https://icon-library.com/images/no-user-image-icon/no-user-image-icon-27.jpg'
+        }
+       ></img>
       </div>
       <div className='userInfo'>
-       <h3>userStatus</h3>
-       <h3>{user.name}</h3>
+       <h3>{user.username}</h3>
+       <legend>{user.name}</legend>
+       <legend>{user.email}</legend>
        <legend>{user.company.catchPhrase}</legend>
       </div>
      </div>
